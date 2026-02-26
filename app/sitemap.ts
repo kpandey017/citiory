@@ -7,7 +7,7 @@ import { topicFamilies } from "@/config/topic-families"
 import { getComparableCityPairs, buildComparePairSlug } from "@/lib/compare-seo"
 import { keywordLandings } from "@/config/keyword-landings"
 
-const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "")
+const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.citiory.com").replace(/\/$/, "")
 
 function getLatestPostDateBySlugs(slugs: string[]): Date {
   const matchedDates = blogs
