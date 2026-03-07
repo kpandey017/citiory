@@ -32,6 +32,11 @@ const nextConfig: NextConfig = {
         destination: "https://www.citiory.com/:path*",
         permanent: true,
       },
+      {
+        source: "/:numeric(\\d+)",
+        destination: "https://www.citiory.com/",
+        permanent: true,
+      },
     ]
   },
 };

@@ -221,37 +221,37 @@ export default async function CityPage({ params }: { params: Promise<Params> }) 
             <div className="bg-white p-4 sm:p-5 md:p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
               <div className="text-2xl sm:text-3xl mb-2">🛡️</div>
               <div className="text-xs sm:text-sm text-gray-600 mb-1">Safety</div>
-              <div className="text-xl sm:text-2xl font-bold text-gray-900">{city.scores.safety.toFixed(1)}/10</div>
+              <div className="text-xl sm:text-2xl font-bold text-gray-900">{city.scores.safety.toFixed(1)} out of 10</div>
             </div>
             <div className="bg-white p-4 sm:p-5 md:p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
               <div className="text-2xl sm:text-3xl mb-2">🌫️</div>
               <div className="text-xs sm:text-sm text-gray-600 mb-1">Pollution</div>
-              <div className="text-xl sm:text-2xl font-bold text-gray-900">{city.scores.pollution.toFixed(1)}/10</div>
+              <div className="text-xl sm:text-2xl font-bold text-gray-900">{city.scores.pollution.toFixed(1)} out of 10</div>
             </div>
             <div className="bg-white p-4 sm:p-5 md:p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
               <div className="text-2xl sm:text-3xl mb-2">📶</div>
               <div className="text-xs sm:text-sm text-gray-600 mb-1">Internet</div>
-              <div className="text-xl sm:text-2xl font-bold text-gray-900">{city.scores.internet.toFixed(1)}/10</div>
+              <div className="text-xl sm:text-2xl font-bold text-gray-900">{city.scores.internet.toFixed(1)} out of 10</div>
             </div>
             <div className="bg-white p-4 sm:p-5 md:p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
               <div className="text-2xl sm:text-3xl mb-2">✨</div>
               <div className="text-xs sm:text-sm text-gray-600 mb-1">Quality of Life</div>
-              <div className="text-xl sm:text-2xl font-bold text-gray-900">{city.scores.qualityOfLife.toFixed(1)}/10</div>
+              <div className="text-xl sm:text-2xl font-bold text-gray-900">{city.scores.qualityOfLife.toFixed(1)} out of 10</div>
             </div>
             <div className="bg-white p-4 sm:p-5 md:p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
               <div className="text-2xl sm:text-3xl mb-2">💼</div>
               <div className="text-xs sm:text-sm text-gray-600 mb-1">Job Market</div>
-              <div className="text-xl sm:text-2xl font-bold text-gray-900">{city.scores.job.toFixed(1)}/10</div>
+              <div className="text-xl sm:text-2xl font-bold text-gray-900">{city.scores.job.toFixed(1)} out of 10</div>
             </div>
             <div className="bg-white p-4 sm:p-5 md:p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
               <div className="text-2xl sm:text-3xl mb-2">🏥</div>
               <div className="text-xs sm:text-sm text-gray-600 mb-1">Healthcare</div>
-              <div className="text-xl sm:text-2xl font-bold text-gray-900">{city.scores.healthcare.toFixed(1)}/10</div>
+              <div className="text-xl sm:text-2xl font-bold text-gray-900">{city.scores.healthcare.toFixed(1)} out of 10</div>
             </div>
             <div className="bg-white p-4 sm:p-5 md:p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
               <div className="text-2xl sm:text-3xl mb-2">🌡️</div>
               <div className="text-xs sm:text-sm text-gray-600 mb-1">Climate</div>
-              <div className="text-xl sm:text-2xl font-bold text-gray-900">{city.scores.climate.toFixed(1)}/10</div>
+              <div className="text-xl sm:text-2xl font-bold text-gray-900">{city.scores.climate.toFixed(1)} out of 10</div>
             </div>
             <div className="bg-white p-4 sm:p-5 md:p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
               <div className="text-2xl sm:text-3xl mb-2">📚</div>

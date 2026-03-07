@@ -38,7 +38,7 @@ export default function CityCard({ city }: Props) {
             <span className="text-base sm:text-lg">🛡️</span>
             <div>
               <div className="text-xs text-gray-500">Safety</div>
-              <div className="text-xs sm:text-sm font-semibold text-gray-900">{city.scores.safety.toFixed(1)}/10</div>
+              <div className="text-xs sm:text-sm font-semibold text-gray-900">{city.scores.safety.toFixed(1)} out of 10</div>
             </div>
           </div>
           <div className="flex items-center space-x-1.5 sm:space-x-2">

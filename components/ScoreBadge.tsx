@@ -15,7 +15,7 @@ export default function ScoreBadge({ score }: Props) {
   return (
     <span className={`inline-flex items-center px-3 py-1.5 rounded-full font-bold text-sm border ${getScoreColor()}`}>
       {score.toFixed(1)}
-      <span className="ml-1 text-xs opacity-75">/10</span>
+      <span className="ml-1 text-xs opacity-75">out of 10</span>
     </span>
   )
 }
