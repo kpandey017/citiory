@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.citiory.com"),
   title: {
     default: "Citiory - City Intelligence Platform",
     template: "%s | Citiory",
@@ -65,7 +65,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "")
+  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.citiory.com").replace(/\/$/, "")
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
