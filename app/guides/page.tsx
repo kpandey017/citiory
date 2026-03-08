@@ -11,8 +11,43 @@ export const metadata: Metadata = {
 }
 
 export default function GuidesPage() {
+  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "")
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Who are these relocation guides for?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "These guides are for people choosing where to live, work remotely, or relocate with a structured decision process.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How should I use a guide on this page?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Pick the guide matching your current goal, follow the steps in order, and then validate your shortlist with city-level data.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do these guides include actionable outcomes?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. Each guide is designed to produce a concrete next step, such as a shortlist or a comparison-ready set of cities.",
+        },
+      },
+    ],
+    url: `${siteUrl}/guides`,
+  }
+
   return (
     <main className="p-4 sm:p-6 md:p-8 max-w-7xl mx-auto">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Guides</h1>
       <p className="text-gray-600 mb-6 sm:mb-8 max-w-3xl">
         Choose a guide based on your goal. Each guide includes when to use it, a simple step order, and the outcome you should get.
@@ -45,6 +80,18 @@ export default function GuidesPage() {
           </Link>
         ))}
       </div>
+
+      <section className="mt-10 sm:mt-12 prose prose-gray max-w-3xl">
+        <h2>How These Guides Help You Decide Faster</h2>
+        <p>
+          These guide hubs are organized around real relocation decisions, from selecting a city shortlist to comparing long-term living
+          tradeoffs. They are structured to reduce research time and turn broad questions into practical next steps.
+        </p>
+        <p>
+          Choose one guide based on your current stage, complete the suggested sequence, and then move into city-level comparisons for final
+          validation.
+        </p>
+      </section>
     </main>
   )
 }

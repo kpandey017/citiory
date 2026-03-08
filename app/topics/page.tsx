@@ -11,8 +11,43 @@ export const metadata: Metadata = {
 }
 
 export default function TopicsPage() {
+  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "")
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What can I learn from topic hubs?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Topic hubs explain key relocation themes and connect learning paths to relevant cities and ranking resources.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How do I choose the best topic to start with?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Choose the topic that matches your immediate challenge, such as budgeting or remote-work setup, then follow linked next steps.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Are topic hubs useful before picking a city?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. They help you define criteria first, making city shortlisting and final comparisons more accurate.",
+        },
+      },
+    ],
+    url: `${siteUrl}/topics`,
+  }
+
   return (
     <main className="p-4 sm:p-6 md:p-8 max-w-7xl mx-auto">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Topics</h1>
       <p className="text-gray-600 mb-6 sm:mb-8 max-w-3xl">
         Pick a topic based on your relocation goal. Each page gives you a clear learning path, related cities, and next steps.
@@ -50,6 +85,18 @@ export default function TopicsPage() {
           </Link>
         ))}
       </div>
+
+      <section className="mt-10 sm:mt-12 prose prose-gray max-w-3xl">
+        <h2>Explore Relocation Topics By Goal</h2>
+        <p>
+          Topic hubs combine educational content with practical city research paths. They are useful when you know your challenge, such as
+          budgeting or remote-work setup, but have not chosen a destination yet.
+        </p>
+        <p>
+          Start with the topic most relevant to your current move stage, then use linked city and ranking pages to convert learning into an
+          actionable shortlist.
+        </p>
+      </section>
     </main>
   )
 }
